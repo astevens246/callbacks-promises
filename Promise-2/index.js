@@ -17,6 +17,18 @@ function asyncNumberChecker(n) {
 // Display the returned message in the console.
 
 asyncNumberChecker(10)
-
+  .then(function(reject) {
+    console.log(reject);
+  }
+  )
+  .catch(function(resolve) {
+    console.log(resolve);
+  });
 
 asyncNumberChecker(5)
+  .then(function(reject) {
+    console.log(reject);
+  })
+  .catch(function(resolve) {
+    console.log(resolve);
+  });
