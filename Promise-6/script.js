@@ -31,6 +31,7 @@ navigator.geolocation.getCurrentPosition(onsuccess, onerror, options);
 
 function getGeolocation(options) {
   return new Promise( (resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject, options)
     
   } )
 }
@@ -38,6 +39,13 @@ function getGeolocation(options) {
 // Like this: 
 
 getGeolocation(options)
-  .then(pos => { })
-  .catch(err => { })
+  .then(pos => {
+    console.log('Your current position is:');
+    console.log(`Latitude : ${pos.coords.latitude}`);
+    console.log(`Longitude: ${pos.coords.longitude}`);
+    console.log(`More or less ${pos.coords.accuracy} meters.`);
+   })
+  .catch(err => {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+   })
 

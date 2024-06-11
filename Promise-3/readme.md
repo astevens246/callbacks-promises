@@ -46,7 +46,7 @@ greet('Your name')
 
 Notice the first `.then()` returns a promise that is handled with a `.then()` on the line below. The output of the first promise is passed into `uppercaser`.
 
-Notice there there is a `.then()` to handle each promise but, there is only a single `.catch()` at the end. This is one of the advantages of using Promises over traditional callbacks. 
+Notice that there is a `.then()` to handle each promise but, there is only a single `.catch()` at the end. This is one of the advantages of using Promises over traditional callbacks. 
 
 **Challenge!** Get `greet` to fail by passing providing a non-string argument.
 
