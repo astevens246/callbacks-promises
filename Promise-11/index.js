@@ -19,6 +19,8 @@ console.log(greeting)
 // What is returned? Is it the value returned by the function
 // or something else? Write your answer below:
 
+// it returns a promise 
+
 
 // An async function always wraps the value it returns in a Promise. 
 // To get at the value you must resolve the Priomise. Do that here. 

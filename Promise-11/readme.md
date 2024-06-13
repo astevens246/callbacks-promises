@@ -5,7 +5,7 @@ The `async` and `await` keywords work with `Promises`. In short an `async` funct
 Here is an example: 
 
 ```JS
-// Async functions begon with the word async
+// Async functions begin with the word async
 async function handleData() {
   return 42
 }

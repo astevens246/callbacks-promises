@@ -25,6 +25,7 @@ Promise.any([lion, hare, tortise]).then(result => {
 // Challenge!
 
 // Test the code above. Explain what happens below:
+// The tortoise wins because it is the first to resolve
 
 
 // Notice this example is the same as the last with the difference

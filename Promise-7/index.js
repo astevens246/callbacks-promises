@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => response.json())
   .then(data => {
@@ -29,10 +31,12 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 
 // Here it is with callbacks:
 
-// fetch('path')
-//   .then(res => res.json())
-//   .then(data => console.log(data))
-
+import('node-fetch').then(({default: fetch}) => {
+  fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.error('Error:', error));
+});
 // Challenges
 
 // Test the code above. The API should return an object something like: 
